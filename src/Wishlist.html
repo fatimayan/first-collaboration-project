@@ -1,53 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header class="gap-4">
-      <div
-        class="flex flex-row justify-around items-end text-center bg-black w-full h-10 text-white"
-      >
-        <p class="ml-56">
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF
-          50%!<span class="font-bold underline">ShopNow</span>
-        </p>
-        <p class="">English</p>
-      </div>  
-      <div class="flex justify-between items-center">
-        <div class="font-bold text-3xl">Exclusive</div>
-        <nav class="flex gap-10 capitalize hover:bg-gray-100 cursor-pointer">
-          <a class="underline">home</a>
-          <a> contact</a>
-          <a> about</a>
-          <a>sign up</a>
-        </nav>
-        <div class="">
-          <i
-            class="fa-solid fa-magnifying-glass absolute ml-56 mt-4 text-sm"
-          ></i>
-          <input
-            type="text"
-            placeholder="what are you looking for?"
-            class="border-0 rounded-lg px-8 py-3 bg-gray-50"
-          />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exclusive — Wishlist</title>
+  <!-- Tailwind Play CDN (no build required) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* small custom tweaks */
+    .card-img {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 160px;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
 
-          <i class="fa fa-user"></i>
-          <i class="fa fa-shopping-cart"></i>
+  <!-- Top announcement bar -->
+  <div class="bg-black text-white text-sm py-2 px-4 text-center">
+    Summer Sale For All Swim Suits And Free Express Delivery — OFF 60% | ShopNow
+  </div>
+
+  <!-- Header -->
+  <header class="border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-2xl font-extrabold">Exclusive</a>
+        <nav class="hidden md:flex gap-4 text-sm text-gray-600">
+          <a href="#" class="hover:text-black">Home</a>
+          <a href="#" class="hover:text-black">Contact</a>
+          <a href="#" class="hover:text-black">About</a>
+          <a href="#" class="hover:text-black">Sign Up</a>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="relative">
+          <input class="w-64 rounded-full border px-4 py-2 text-sm focus:outline-none" placeholder="What are you looking for?" />
+        </div>
+        <button class="p-2" aria-label="wishlist">
+          ❤
+        </button>
+        <button class="p-2" aria-label="cart">
+          🛒
+        </button>
+        <button class="p-2" aria-label="account">
+          👤
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <!-- Wishlist header -->
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-xl font-semibold">Wishlist <span class="text-gray-500"> (4)</span></h2>
+      <button class="bg-white border border-gray-300 px-4 py-2 rounded hover:bg-gray-50">Move All To Bag</button>
+    </div>
+
+    <!-- Wishlist grid -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <!-- Card 1 -->
+      <article class="border rounded-lg overflow-hidden shadow-sm relative">
+        <div class="absolute top-3 left-3 bg-red-600 text-white text-xs px-2 py-1 rounded">-25%</div>
+        <div><img class="justify-center flex items-center" src="shandad.png" alt=""></div>
+        <div class="p-4">
+          <h3 class="text-sm font-medium">Gucci duffle bag</h3>
+          <p class="mt-2 text-sm text-gray-500 line-through">$160</p>
+          <p class="text-lg text-red-600 font-semibold">$960</p>
+          <div class="mt-4 flex gap-3">
+            <button class="flex-1 bg-black text-white py-2 rounded text-sm">Add To Cart</button>
+            <button class="w-10 h-10 border rounded flex items-center justify-center" aria-label="remove">🗑</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="border rounded-lg overflow-hidden shadow-sm relative">
+        <div><img src="sameecad.png" alt=""></div>
+        <div class="p-4">
+          <h3 class="text-sm font-medium">RGB liquid CPU Cooler</h3>
+          <p class="mt-2 text-lg text-red-600 font-semibold">$1960</p>
+          <div class="mt-4 flex gap-3">
+            <button class="flex-1 bg-black text-white py-2 rounded text-sm"><i class="fa-solid text-white fa-cart-shopping"></i> Add To Cart</button>
+            <button class="w-10 h-10 border rounded flex items-center justify-center" aria-label="remove">🗑</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="border rounded-lg overflow-hidden shadow-sm relative">
+        <div><img src="game.png" alt=""></div>
+        <div class="p-4">
+          <h3 class="text-sm font-medium">GP11 Shooter USB Gamepad</h3>
+          <p class="mt-2 text-lg text-red-600 font-semibold">$550</p>
+          <div class="mt-4 flex gap-3">
+            <button class="flex-1 bg-black text-white py-2 rounded text-sm">  Add To Cart</button>
+            <button class="w-10 h-10 border rounded flex items-center justify-center" aria-label="remove">🗑</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="border rounded-lg overflow-hidden shadow-sm relative">
+        <div><img src="koodh.png" alt=""></div>
+        <div class="p-4">
+          <h3 class="text-sm font-medium">Quilted Satin Jacket</h3>
+          <p class="mt-2 text-lg text-red-600 font-semibold">$750</p>
+          <div class="mt-4 flex gap-3">
+            <button class="flex-1 bg-black text-white py-2 rounded text-sm">Add To Cart</button>
+            <button class="w-10 h-10 border rounded flex items-center justify-center" aria-label="remove">🗑</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Divider -->
+    <div class="border-t my-8"></div>
+
+    <!-- Just For You header -->
+    <div class="flex items-center justify-between mb-6">
+      <h3 class="text-lg font-semibold">Just For You</h3>
+      <button class="text-sm border px-3 py-1 rounded">See All</button>
+    </div>
+
+    <!-- Just For You grid -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Small product cards -->
+      <div class="bg-white border rounded-lg p-4 text-center">
+        <div class="h-36 bg-center bg-contain bg-no-repeat" style="background-image:url('https://via.placeholder.com/300x200?text=Laptop');"></div>
+        <h4 class="mt-3 text-sm font-medium">ASUS FHD Gaming Laptop</h4>
+        <p class="mt-2 text-sm text-gray-400 line-through">$1160</p>
+        <p class="text-red-600 font-semibold">$960</p>
+        <div class="mt-3">
+          <button class="bg-black text-white w-full py-2 rounded text-sm">Add To Cart</button>
         </div>
       </div>
 
-      <div class="mt-10 text-gray-300 w-[60% ] ml-[32rem]"><hr /></div>
-    </header>
-  </body>
+      <div class="bg-white border rounded-lg p-4 text-center">
+        <div class="h-36 bg-center bg-contain bg-no-repeat" style="background-image:url('https://via.placeholder.com/300x200?text=Monitor');"></div>
+        <h4 class="mt-3 text-sm font-medium">IPS LCD Gaming Monitor</h4>
+        <p class="mt-2 text-lg font-semibold">$1160</p>
+        <div class="mt-3">
+          <button class="bg-black text-white w-full py-2 rounded text-sm">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="bg-white border rounded-lg p-4 text-center">
+        <div class="h-36 bg-center bg-contain bg-no-repeat" style="background-image:url('https://via.placeholder.com/300x200?text=Gamepad+Red');"></div>
+        <h4 class="mt-3 text-sm font-medium">HAVIT HV-G92 Gamepad</h4>
+        <p class="mt-2 text-red-600 font-semibold">$560</p>
+        <div class="mt-3">
+          <button class="bg-black text-white w-full py-2 rounded text-sm">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="bg-white border rounded-lg p-4 text-center">
+        <div class="h-36 bg-center bg-contain bg-no-repeat" style="background-image:url('https://via.placeholder.com/300x200?text=Keyboard');"></div>
+        <h4 class="mt-3 text-sm font-medium">AK-800 Wired Keyboard</h4>
+        <p class="mt-2 text-lg font-semibold">$200</p>
+        <div class="mt-3">
+          <button class="bg-black text-white w-full py-2 rounded text-sm">Add To Cart</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h5 class="font-bold text-xl">Exclusive</h5>
+        <p class="mt-4 text-sm text-gray-300">Subscribe</p>
+        <p class="mt-2 text-xs text-gray-400">Get 10% off your first order</p>
+        <div class="mt-3 flex gap-2">
+          <input class="rounded-l px-3 py-2 text-black text-sm w-full md:w-auto" placeholder="Enter your email" />
+          <button class="bg-white text-black px-4 rounded-r">→</button>
+        </div>
+      </div>
+
+      <div>
+        <h6 class="font-semibold">Support</h6>
+        <p class="text-sm text-gray-400 mt-3">111 Bijoy saroni, Dhaka, Bangladesh</p>
+        <p class="text-sm text-gray-400 mt-2">exclusive@gmail.com</p>
+        <p class="text-sm text-gray-400 mt-2">+88015-88888-9999</p>
+      </div>
+
+      <div>
+        <h6 class="font-semibold">Account</h6>
+        <ul class="text-sm text-gray-400 mt-3 space-y-2">
+          <li>My Account</li>
+          <li>Login / Register</li>
+          <li>Cart</li>
+          <li>Wishlist</li>
+          <li>Shop</li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="font-semibold">Quick Link</h6>
+        <ul class="text-sm text-gray-400 mt-3 space-y-2">
+          <li>Privacy Policy</li>
+          <li>Terms Of Use</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-gray-500">
+        © Copyright Rimel 2022. All right reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
