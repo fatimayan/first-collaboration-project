@@ -47,7 +47,151 @@
         </div>
       </div>
 
-      <div class="mt-10 text-gray-300 w-[60% ] ml-[32rem]"><hr /></div>
+      <div class="mt-10 text-gray-300 w- ml-[32rem]"><hr /></div>
     </header>
+    <!-- Checkout Section -->
+  <section class="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-10 mt-10">
+    
+    <!-- Billing Details -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-5">Billing Details</h2>
+
+      <form class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">First Name*</label>
+          <input type="text" class="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Company Name</label>
+          <input type="text" class="w-full border border-gray-300 p-2 rounded-md">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Street Address*</label>
+          <input type="text" class="w-full border border-gray-300 p-2 rounded-md">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Apartment, floor, etc. (optional)</label>
+          <input type="text" class="w-full border border-gray-300 p-2 rounded-md">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Town/City*</label>
+          <input type="text" class="w-full border border-gray-300 p-2 rounded-md">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Phone Number*</label>
+          <input type="tel" class="w-full border border-gray-300 p-2 rounded-md">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Email Address*</label>
+          <input type="email" class="w-full border border-gray-300 p-2 rounded-md">
+        </div>
+
+        <div class="flex items-center mt-3">
+          <input type="checkbox" id="saveInfo" class="mr-2">
+          <label for="saveInfo" class="text-sm text-gray-700">Save this information for faster check-out next time</label>
+        </div>
+      </form>
+    </div>
+
+    <!-- Order Summary -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-5">Your Order</h2>
+
+      <div class="border border-gray-300 rounded-lg p-4 space-y-4 bg-white shadow-sm">
+        <div class="flex justify-between border-b pb-2">
+          <span>LCD Monitor</span>
+          <span>$650</span>
+        </div>
+        <div class="flex justify-between border-b pb-2">
+          <span>HI Gamepad</span>
+          <span>$1100</span>
+        </div>
+
+        <div class="flex justify-between">
+          <span>Subtotal:</span>
+          <span>$1750</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Shipping:</span>
+          <span>Free</span>
+        </div>
+
+        <div class="flex justify-between font-semibold text-lg border-t pt-2">
+          <span>Total:</span>
+          <span>$1750</span>
+        </div>
+
+        <!-- Payment Options -->
+        <div class="mt-4 space-y-2">
+          <label class="flex items-center">
+            <input type="radio" name="payment" class="mr-2">
+            Bank
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="payment" class="mr-2">
+            Cash on Delivery
+          </label>
+        </div>
+
+        <!-- Coupon -->
+        <div class="flex gap-2 mt-4">
+          <input type="text" placeholder="Coupon Code" class="flex-1 border border-gray-300 p-2 rounded-md">
+          <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">Apply Coupon</button>
+        </div>
+
+        <!-- Place Order -->
+        <button class="w-full mt-4 bg-red-600 text-white py-3 rounded-md font-medium hover:bg-red-700">
+          Place Order
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white mt-16 py-10">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-6 px-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-3">Exclusive</h3>
+        <p>Get 10% off your first order</p>
+        <div class="flex mt-3">
+          <input type="email" placeholder="Enter your email" class="p-2 text-black rounded-l-md w-full">
+          <button class="bg-red-500 px-3 rounded-r-md">→</button>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Support</h4>
+        <p>111 Bijoy sarani, Dhaka, Bangladesh</p>
+        <p>exclusive@gmail.com</p>
+        <p>+88015-88888-9999</p>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Account</h4>
+        <ul class="space-y-1">
+          <li>My Account</li>
+          <li>Login / Register</li>
+          <li>Cart</li>
+          <li>Wishlist</li>
+          <li>Shop</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Quick Link</h4>
+        <ul class="space-y-1">
+          <li>Privacy Policy</li>
+          <li>Terms of Use</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center text-gray-400 text-sm mt-10 border-t border-gray-700 pt-5">
+      © Copyright 2022. All rights reserved.
+    </div>
+  </footer>
+
   </body>
 </html>
