@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To-Do List</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-  <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md">
-    <h1 class="text-2xl font-bold text-center mb-6 text-blue-600">📝 To-Do List</h1>
-
-    <!-- Input Section -->
-    <div class="flex mb-4">
-      <input id="taskInput" type="text" placeholder="Enter a new task..."
-        class="flex-grow p-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-400">
-      <button id="addBtn"
-        class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition">Add</button>
-    </div>
-
-    <!-- Task List -->
-    <ul id="taskList" class="space-y-2">
-      <!-- Tasks will appear here -->
-    </ul>
-
-    <!-- Footer -->
-    <div class="mt-6 text-center text-sm text-gray-500">
-      <p>Built with ❤ using TailwindCSS & JavaScript</p>
-    </div>
-  </div>
-
-  <script>
     const taskInput = document.getElementById("taskInput");
     const addBtn = document.getElementById("addBtn");
     const taskList = document.getElementById("taskList");
@@ -116,7 +84,4 @@
         taskList.appendChild(li);
       });
     }
-  </script>
-
-</body>
-</html>
+  
